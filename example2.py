@@ -43,7 +43,7 @@ cost = tf.reduce_sum(tf.pow(pred-Y, 2))/(2*n_samples)
 optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
 
 # Start training phase
-with tf.sessionion() as session:
+with tf.Session() as session:
 
     # Run the initializer
     session.run(tf.global_variables_initializer())
